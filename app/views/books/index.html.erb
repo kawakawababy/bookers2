@@ -1,6 +1,6 @@
-<% @user do |user| %>
+<% @user.books.each do |book| %>
   <div>
-    <%= user.book.title %>
-    <%= user.book.body %>
+    <%= book.title %>
+    <%= book.body %>
   </div>
 <% end %>
