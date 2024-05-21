@@ -1,1 +1,6 @@
 <h1>Book detail</h1>
+<div>
+<%= link_to user_path(@book.user) do %>
+  <%= @book.user.name %>
+<% end %>
+</div>
