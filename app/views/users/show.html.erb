@@ -1,5 +1,13 @@
 <div>
   <h1>User info</h1>
+  <%= @user.name %>
+  <%#= image_tag @user.get_profile_image(100,100) %>
 </div>
 
-<h1><%= @user.name %></h1>
+<h1>Books</h1>
+<% @books.each do |book| %>
+<div>
+  <%= link_to book.title, book_path(book.id) %>
+  <p>Opinion:<%= book.body %></p>
+</div>
+<% end %>
