@@ -13,6 +13,10 @@
   <body>
     <header>
       <% if user_signed_in? %>
+      <br>
+        <li>
+          <%= link_to "Home", user_path(current_user.id) %>
+        </li>
         <li>
           <%= link_to "Users", about_path %>
         </li>
