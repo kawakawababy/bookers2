@@ -2,23 +2,7 @@
   <div class = "row">
 
     <div class = "col-lg-3">
-      <h1>User info</h1>
-      <%= image_tag @user.get_profile_image(100,100) %>
-      <table class = "table">
-        <tbody>
-          <tr>
-            <th>name</th>
-            <th><%= @user.name %></th>
-          </tr>
-          <tr>
-            <th>introduction</th>
-            <th><%= @user.introduction %></th>
-          </tr>
-        </tbody>
-      </table>
-      <% if @user == current_user %>
-        <%= link_to "プロフィール編集", edit_user_path(@user) %>
-      <% end %>
+      <%= render 'books/side', user: @user, book: @book %>
     </div>
 
     <div class = "col-lg-8 offset-1">
