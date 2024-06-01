@@ -1,21 +1,33 @@
-<h1>
-  welcome to <i class="fa-solid fa-book"></i>
-  <strong>Bookers</strong> !!
-</h1>
+<div class="container">
+  <div class="row">
+    <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">
 
-<p>
-  In <i class="fa-solid fa-book"></i>
-  <strong>Bookers</strong>,
-</p>
+      <h1>
+        welcome to <i class="fa-solid fa-book"></i>
+        <strong>Bookers</strong> !!
+      </h1>
 
-<p>
-  you can share and exchange your opinions , inpressions , and emotions
-</p>
+      <p>
+        In <i class="fa-solid fa-book"></i>
+        <strong>Bookers</strong>,
+      </p>
 
-<p>
-  about various books!
-</p>
+      <p>
+        you can share and exchange your opinions , inpressions , and emotions
+      </p>
+      <p>
+        about various books!
+      </p>
 
-<%= link_to "Log in", new_user_session_path %>
+      <div class="btn-wrapper col-10 mx-auto">
+        <div class="row">
+          <%= link_to "Log in", new_user_session_path %>
+        </div>
+        <div class="row">
+          <%= link_to "Sign in", new_user_registration_path %>
+        </div>
+      </div>
 
-<%= link_to "Sign in", new_user_registration_path %>
+    </div>
+  </div>
+</div>
