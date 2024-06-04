@@ -11,26 +11,33 @@
 
     <div class="col-lg-8 offset-1">
       <h1>Book detail</h1>
-      <div>
-        <%= link_to user_path(@book.user) do %>
-          <%= image_tag @book.user.get_profile_image(100,100) %>
-        <% end %>
-
-        <%= link_to user_path(@book.user) do %>
-          <%= @book.user.name %>
-        <% end %>
-
-        <%= link_to book_path(@book) do %>
-          <%= @book.title %>
-        <% end %>
-
-        <%= @book.body %>
-
-        <% if @book.user == current_user %>
-          <%= link_to "Edit", edit_book_path(@book) %>
-          <%= link_to "Destroy", book_path(@book), method: :delete %>
-        <% end %>
-      </div>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>
+              <%= link_to user_path(@book.user) do %>
+                <%= image_tag @book.user.get_profile_image(100,100) %>
+                <br>
+                <%= @book.user.name %>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to book_path(@book) do %>
+                <%= @book.title %>
+              <% end %>
+            </td>
+            <td><%= @book.body %></td>
+            <% if @book.user == current_user %>
+              <td>
+                <%= link_to "Edit", edit_book_path(@book) %>
+              </td>
+              <td>
+                <%= link_to "Destroy", book_path(@book), method: :delete %>
+              </td>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
