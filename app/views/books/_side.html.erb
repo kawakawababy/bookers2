@@ -12,13 +12,11 @@
     </tr>
   </tbody>
 </table>
-<% if user == current_user %>
-  <div class="row">
-    <%= link_to edit_user_path(user), class: "btn btn-outline-secondary btn-block" do %>
-      <i class="fa-solid fa-user-gear"></i>
-    <% end %>
-  </div>
-<% end %>
+<div class="row">
+  <%= link_to edit_user_path(user), class: "btn btn-outline-secondary btn-block" do %>
+    <i class="fa-solid fa-user-gear"></i>
+  <% end %>
+</div>
 
 
 <h1>New book</h1>
